@@ -8,8 +8,6 @@
 
 <a href="https://youtu.be/3A5wpWgrHTI" target="_blank"><img src="http://img.youtube.com/vi/3A5wpWgrHTI/0.jpg" 
 alt="DRE-SLAM" width="320" height="240"/></a>
-<a href="https://youtu.be/3A5wpWgrHTI" target="_blank"><img src="http://img.youtube.com/vi/3A5wpWgrHTI/1.jpg" 
-alt="DRE-SLAM" width="320" height="240"/></a>
 
 **Paper**: ***DRE-SLAM: Dynamic RGB-D Encoder SLAM for Differential-Drive Robot***, Dongsheng Yang, Shusheng Bi, Wei Wang, Chang Yuan, Wei-Wang, Xianyu Qi, and Yueri Cai.
 
