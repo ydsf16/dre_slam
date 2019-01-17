@@ -12,3 +12,6 @@ alt="DRE-SLAM" width="320" height="240"/></a>
 **Paper**: ***DRE-SLAM: Dynamic RGB-D Encoder SLAM for Differential-Drive Robot***, Dongsheng Yang, Shusheng Bi, Wei Wang, Chang Yuan, Wei-Wang, Xianyu Qi, and Yueri Cai.
 
 **Once the paper is accepted, we will open the source code.**
+
+# Contact us
+For any issues, please feel free to contact **[Dongsheng Yang](https://github.com/ydsf16)**: <ydsf16@buaa.edu.cn>
