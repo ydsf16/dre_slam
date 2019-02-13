@@ -1,0 +1,87 @@
+%YAML:1.2
+
+#--------------------------------------------------------------------------------------------
+# Camera params. Pinhole
+#--------------------------------------------------------------------------------------------
+cam_rgb_topic_: /kinect2/qhd/image_color
+cam_depth_topic_: /kinect2/qhd/image_depth_rect
+
+cam_fx_: 525.2866213437447
+cam_fy_: 525.2178123117577
+cam_cx_: 472.85738972861157
+cam_cy_: 264.77181506420266
+cam_k1_: 0.04160142651680036
+cam_k2_: -0.04771035303381654
+cam_p1_: -0.0032638387781624705
+cam_p2_: -0.003985120051161831
+cam_k3_: 0.01110263483766991
+
+cam_height_: 540
+cam_width_: 960
+
+cam_depth_factor_: 0.001   # Depth scale factor.
+
+cam_dmax_: 8.0   # Max depth value to be used. (m)
+cam_dmin_: 0.1   # Min depth value to be used. (m) 
+ 
+cam_fps_: 20     # Camera FPs.
+
+#--------------------------------------------------------------------------------------------
+# Robot intrinsic and extrinsic
+#--------------------------------------------------------------------------------------------
+#### Intrinsic
+encoder_topic_: /rbot/encoder
+
+odom_kl_: 4.0652e-5   # left wheel factor
+odom_kr_: 4.0668e-5   # right wheel factor
+odom_b_: 0.3166       # wheel space
+odom_K_: 0.008        # Noise factor.
+
+#### Extrinsic Trc
+Trc_: !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: d
+   data: [ 0.0, -0.034899497, 0.999390827, 0.124, -1.0, 0.0, 0.0, -0.1, 0.0, -0.999390827, -0.034899497, 0.0 ]
+
+#--------------------------------------------------------------------------------------------
+# RGB-D Encoder Tracking
+#--------------------------------------------------------------------------------------------
+#### ORB feature 
+ret_ft_n_features_: 1600   # Number of ORB features per frame.
+
+#### Tracking
+ret_tk_dist_th_: 4.0    # Local map search radius. (m)
+ret_tk_angle_th_: 1.0   # Local map search angle. (rad)
+ret_tk_db_: 0.20         # Base threshold for erroneous match discard. (m)
+ret_tk_kd_: 0.025        # Scale factor of the threshold for erroneous match discard.
+
+#### Keyframe decision
+# Condation 1.
+ret_kd_fps_factor_: 0.9
+# Condation 2: 
+ret_kd_dist_th_: 0.3    # Max distance (m)
+ret_kd_angle_th_: 0.5   # Max angle (rad)
+
+#--------------------------------------------------------------------------------------------
+# Dynamic Pixels Culling
+#--------------------------------------------------------------------------------------------
+dpc_n_near_kfs_: 5                # Number of near keyframes.
+dpc_npts_per_cluster_: 6000       # Number of points per cluster.
+dpc_n_sel_pts_per_cluster_: 100   # Number of points per cluster to be selected for dynamic cluster decision.
+dpc_search_square_size_: 9        # 9 pixels
+
+#--------------------------------------------------------------------------------------------
+# Sparse Mapping 
+#--------------------------------------------------------------------------------------------
+#### Local Mapping
+sm_lm_window_size_: 8  # local BA window size sp_lm_window_size_ KFs.
+
+
+#--------------------------------------------------------------------------------------------
+# OctoMap Construction
+#--------------------------------------------------------------------------------------------
+oc_voxel_size_: 0.1   # Voxel size of the OctoMap (m).
+oc_submap_size_: 5    # Sub-OctoMap size (KFs)
+
+

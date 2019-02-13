@@ -1,0 +1,18 @@
+<launch>
+
+<!-- Start DRE-SLAM System -->
+<node pkg="dre_slam" type="dre_slam_node" name="dre_slam_node" output="screen">
+	<param name="dre_slam_cfg_dir" value="$(find dre_slam)/config/extention_test.yaml" />
+	<param name="orbvoc_dir" value="$(find dre_slam)/config/orbvoc/ORBvoc.bin" />
+	<param name="yolov3_classes_dir" value="$(find dre_slam)/config/yolov3/coco.names" />
+	<param name="yolov3_model_dir" value="$(find dre_slam)/config/yolov3/yolov3.cfg" />
+	<param name="yolov3_weights_dir" value="$(find dre_slam)/config/yolov3/yolov3.weights" />
+	<param name="results_dir" value="$(find dre_slam)/results" />
+</node>
+
+<!-- Open Rviz -->
+<node pkg="rviz" type="rviz" name="rviz" output="screen"
+	args="-d $(find dre_slam)/config/rviz/default.rviz" required="true">
+</node>
+
+</launch>
