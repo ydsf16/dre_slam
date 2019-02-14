@@ -4,11 +4,9 @@
 
 **DRE-SLAM** is developed for a differential-drive robot that runs in dynamic indoor scenarios. It takes the information of an RGB-D camera and two wheel-encoders as inputs. The outputs are the 2D pose of the robot and a static background OctoMap.
 
-**Video**: <https://youtu.be/3A5wpWgrHTI>
+**Video**:  [Youtube](https://youtu.be/3A5wpWgrHTI) [Dropbox](https://www.dropbox.com/s/uvqyb3mo6tj4pf2/DRE-SLAM-20190111-v3.mp4?dl=0) [Pan.Baidu](https://pan.baidu.com/s/1vVakfXZJziU12-vqw7Go1Q)
 
 <a href="https://youtu.be/3A5wpWgrHTI" target="_blank"><img src="http://img.youtube.com/vi/3A5wpWgrHTI/0.jpg" 
-alt="DRE-SLAM" width="320" height="240"/></a>
-<a href="https://youtu.be/3A5wpWgrHTI" target="_blank"><img src="http://img.youtube.com/vi/3A5wpWgrHTI/1.jpg" 
 alt="DRE-SLAM" width="320" height="240"/></a>
 
 **Paper**: ***DRE-SLAM: Dynamic RGB-D Encoder SLAM for Differential-Drive Robot***, Dongsheng Yang, Shusheng Bi, Wei Wang, Chang Yuan, Wei Wang, Xianyu Qi, and Yueri Cai. (Remote Sensing, 2019) [PDF](https://www.mdpi.com/2072-4292/11/4/380/pdf), [WEB](https://www.mdpi.com/2072-4292/11/4/380)
@@ -85,7 +83,7 @@ source ~/catkin_ws/devel/setup.bash
 # Example
 
 ## Dataset
-We collected several data sequences in our lab using our Redbot robot. The dataset is available at [Pan.Baidu](https://pan.baidu.com/s/1freJVLeIE525xHUZY01HmQ) or **Dropbox** (available soon).
+We collected several data sequences in our lab using our Redbot robot. The dataset is available at [Pan.Baidu](https://pan.baidu.com/s/1freJVLeIE525xHUZY01HmQ) or [Dropbox](https://www.dropbox.com/sh/f7fsx8s9k9oya3r/AACBoOUlPNo7inOVceHD5gy_a?dl=0).
 
 ## Run
 ### 1. Open a terminal and launch dre_slam
