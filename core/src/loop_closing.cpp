@@ -219,30 +219,8 @@ bool LoopClosing::computeTrans2KF ( KeyFrame* kf, KeyFrame* lkf, Sophus::SE2& de
     Eigen::Matrix4d T_w_r = T_r_w.inverse();
     double z = fabs ( T_w_r ( 2, 3 ) ) ;
 
-//     if ( z > 0.02 ) {
-//         return false;
-//     }
-// 
-//     if ( inlier_size < 50 ) {
-//         return false;
-//     }
 
-    double inlier_th = 88;
-    if(cfg_->ret_ft_n_features_ > 1000)
-		inlier_th = 88 + 0.06 * (cfg_->ret_ft_n_features_ - 1000);
-	
-	double z_th = 0.03;
-	if(cfg_->ret_ft_n_features_ > 1000)
-		z_th = 0.03 - 0.00001 * (cfg_->ret_ft_n_features_ - 1000);
-
-	z_th = 0.010;
-	
-	//if ( ( inlier_size <= inlier_th && z <= z_th ) || ( inlier_size > inlier_th && z <= z_th ) ) {
-		
-	std::cout << "\n\ninlier and z: " << inlier_size << " " << z << std::endl;
-// 	std::cout << "Delta: " << fabs ( delta_pose.translation() ( 0 ) )  << " " << fabs ( delta_pose.translation() ( 1 ) ) << " " << fabs ( delta_pose.so2().log() ) << std::endl;
-	
-	if ( (inlier_size > 55 && z < 0.012) || (inlier_size > 90 && z < 0.015) || (inlier_size > 200 && z < 0.025)) {
+    if ( (inlier_size > 55 && z < 0.012) || (inlier_size > 90 && z < 0.015) || (inlier_size > 200 && z < 0.025)) {
         std::vector<cv::KeyPoint> inlier_kps;
         std::vector<MapPoint*> inlier_mpts;
 
@@ -263,11 +241,6 @@ bool LoopClosing::computeTrans2KF ( KeyFrame* kf, KeyFrame* lkf, Sophus::SE2& de
         if ( fabs ( delta_pose.translation() ( 0 ) )  > 0.6 || fabs ( delta_pose.translation() ( 1 ) ) > 0.6 || fabs ( delta_pose.so2().log() ) > 0.7 ) { 
             return false;
         }
-        
-        // TODO 
-        // TODO 
-        //std::cout << "\n\ninlier and z: " << inlier_size << " " << z << std::endl;
-        std::cout << "Delta: " << fabs ( delta_pose.translation() ( 0 ) )  << " " << fabs ( delta_pose.translation() ( 1 ) ) << " " << fabs ( delta_pose.so2().log() ) << std::endl;
 
         return true;
     }
@@ -408,4 +381,3 @@ int LoopClosing::matchByBow ( KeyFrame* pKF1, KeyFrame* pKF2, std::vector< MapPo
 
 
 } // namespace dre_slam
-
