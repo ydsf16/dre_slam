@@ -4,7 +4,7 @@
 
 **DRE-SLAM** is developed for a differential-drive robot that runs in dynamic indoor scenarios. It takes the information of an RGB-D camera and two wheel-encoders as inputs. The outputs are the 2D pose of the robot and a static background OctoMap.
 
-**Video**:  [Youtube](https://youtu.be/3A5wpWgrHTI) [Dropbox](https://www.dropbox.com/s/uvqyb3mo6tj4pf2/DRE-SLAM-20190111-v3.mp4?dl=0) [Pan.Baidu](https://pan.baidu.com/s/1vVakfXZJziU12-vqw7Go1Q)
+**Video**:  [Youtube](https://youtu.be/3A5wpWgrHTI) or [Dropbox](https://www.dropbox.com/s/uvqyb3mo6tj4pf2/DRE-SLAM-20190111-v3.mp4?dl=0) or [Pan.Baidu](https://pan.baidu.com/s/1vVakfXZJziU12-vqw7Go1Q)
 
 <a href="https://youtu.be/3A5wpWgrHTI" target="_blank"><img src="http://img.youtube.com/vi/3A5wpWgrHTI/0.jpg" 
 alt="DRE-SLAM" width="320" height="240"/></a>
