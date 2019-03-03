@@ -53,11 +53,11 @@ void Tracking::RGBDThread()
     while ( true ) {
 
         if ( checkNewFrame() ) {
-            RunTimer t;
-            t.start();
-
             // get current frame.
             cur_frame_ = getNewFrame();
+		
+	    RunTimer t;
+            t.start();
 			
             // process current frame.
             RGBDProcessing();
