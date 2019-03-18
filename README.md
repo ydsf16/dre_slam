@@ -2,6 +2,8 @@
 ## Dynamic RGB-D Encoder SLAM for a Differential-Drive Robot
 **Authors**: [Dongsheng Yang](https://github.com/ydsf16), [Shusheng Bi](http://ir.lib.buaa.edu.cn/Scholar/ScholarCard/5784), [Wei Wang](http://ir.lib.buaa.edu.cn/Scholar/ScholarCard/5800), Chang Yuan, Wei Wang, Xianyu Qi, and [Yueri Cai](http://ir.lib.buaa.edu.cn/Scholar/ScholarCard/5785)
 
+![image](https://github.com/ydsf16/dre_slam/blob/master/corridor.gif)
+
 **DRE-SLAM** is developed for a differential-drive robot that runs in dynamic indoor scenarios. It takes the information of an RGB-D camera and two wheel-encoders as inputs. The outputs are the 2D pose of the robot and a static background OctoMap.
 
 **Video**:  [Youtube](https://youtu.be/3A5wpWgrHTI) or [Dropbox](https://www.dropbox.com/s/uvqyb3mo6tj4pf2/DRE-SLAM-20190111-v3.mp4?dl=0) or [Pan.Baidu](https://pan.baidu.com/s/1vVakfXZJziU12-vqw7Go1Q)
